@@ -9,11 +9,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-[22px] font-black italic text-white">MCM</span>
-              <div className="flex flex-col">
-                <span className="text-base font-bold text-white leading-tight">Main Character</span>
-                <span className="text-[10px] font-medium tracking-[0.35em] text-[#EC4B46]">MEDIA</span>
-              </div>
+              <img src="/Logo.svg" alt="The Prime Media" className="h-50 w-auto" />
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
               Making Your Brand the Main Character.

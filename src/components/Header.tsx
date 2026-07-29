@@ -22,13 +22,7 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative flex items-center justify-center w-12 h-12">
-              <span className="text-[28px] font-black italic text-white">MCM</span>
-            </div>
-            <div className="flex flex-col ml-1">
-              <span className="text-[18px] font-bold text-white leading-none tracking-tight">Main Character</span>
-              <span className="text-[11px] font-medium tracking-[0.35em] text-[#EC4B46] mt-1 ml-0.5">MEDIA</span>
-            </div>
+            <img src="/Logo.svg" alt="The Prime Media" className="h-50 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10">
