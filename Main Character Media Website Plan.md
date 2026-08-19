@@ -1,6 +1,6 @@
-MAIN CHARACTER MEDIA Gate © 
+THE PRIME MEDIA Gate © 
 
-THE MAINCHARACTER 
+THE PRIME MEDIA 
 
 # Website Navigation 
 
@@ -18,7 +18,7 @@ THE MAINCHARACTER
 
 Primary CTA 
 
-Book a Discovery Call/ Start Your Main Character Journey 
+Book a Discovery Call / Take Your Brand to Its Prime 
 
 This CTA should remain visible throughout the website. 
 
@@ -32,9 +32,9 @@ Section 1: Hero Section
 
 # Content: 
 
-- Tagline: Making Your Brand the Main Character. 
+- Tagline: Your Brand, at it's Prime. 
 
-- Short introduction to Main Character Media. 
+- Short introduction to The Prime Media. 
 
 - Clear call-to-action buttons. 
 
@@ -42,7 +42,7 @@ CTA Buttons:
 
 - Book a Discovery Call 
 
-- View Our Work/Start Your Story 
+- View Our Work 
 
 Section 2: The Problem 
 
@@ -62,7 +62,7 @@ Discuss common challenges brands face:
 
 - Difficulty standing out in crowded markets 
 
-Introduce Main Character Media as the solution. 
+Introduce The Prime Media as the solution. 
 
 Section 3: Our Philosophy 
 
@@ -72,7 +72,7 @@ Every Brand Deserves the Spotlight.
 
 # Content: 
 
-Introduce the Main Character concept and explain how our agency helps brands become memorable, recognizable, and influential. 
+Introduce the Prime concept and explain how our agency helps brands reach their highest potential, becoming memorable, recognizable, and influential. 
 
 Section 4: Services Overview 
 
@@ -130,7 +130,7 @@ Section 7: Final CTA
 
 Heading: 
 
-Ready to Become the Main Character? 
+Ready to Take Your Brand to Its Prime? 
 
 CTA: 
 
@@ -146,7 +146,7 @@ Section 1: Our Story
 
 Content: 
 
-- Why Main Character Media was created 
+- Why The Prime Media was created 
 
 - The problem we saw in the market 
 
@@ -198,7 +198,7 @@ Include:
 
 - Professional photos 
 
-Section 6: The Main Character Framework™ 
+Section 6: The Prime Framework™ 
 
 Our proprietary process. 
 
@@ -206,7 +206,7 @@ Act 1: Discovery
 
 Understanding the business, audience, goals, and market. 
 
-Act 2: Character Development 
+Act 2: Brand Development 
 
 Building brand positioning, identity, and messaging. 
 
@@ -496,9 +496,9 @@ Button: Book a Discovery Call
 
 Website Footer (in every page) 
 
-Main Character Media 
+The Prime Media 
 
-Making Your Brand the Main Character. 
+Your Brand, at it's Prime. 
 
 Quick Links 
 
@@ -536,5 +536,5 @@ Core Brand Message
 
 Every page of the website should reinforce one message: 
 
-"Your brand is the main character. We help write the story.” 
+"Your Brand, at it's Prime." 
 

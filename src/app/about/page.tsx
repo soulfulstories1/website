@@ -1,174 +1,238 @@
+import Link from "next/link";
+
+const pillars = [
+  {
+    number: "01",
+    title: "Strategic Branding & Identity",
+    subtitle: "Brand Architecture & Position",
+    desc: "We define brand identities, logo design, design systems, and strategic positioning that turn quiet companies into unmistakable market leaders.",
+  },
+  {
+    number: "02",
+    title: "Visual Storytelling & Reels",
+    subtitle: "High-Impact Content Creation",
+    desc: "Commercial video production, high-converting social reels, and editorial photography engineered to capture instant audience attention.",
+  },
+  {
+    number: "03",
+    title: "Performance & Growth Marketing",
+    subtitle: "Paid Ads & Conversion Funnels",
+    desc: "Data-driven Meta ad campaigns, retargeting architectures, and community growth strategies built for high-ROI scalability.",
+  },
+  {
+    number: "04",
+    title: "Next-Gen Web Platforms",
+    subtitle: "Next.js & Digital Experiences",
+    desc: "Lightning-fast business websites, landing pages, and interactive digital platforms designed for maximum conversion and brand prestige.",
+  },
+];
+
+const editorialStats = [
+  { value: "100+", label: "Brands Empowered Globally" },
+  { value: "300%", label: "Average Reach & Engagement Lift" },
+  { value: "0%", label: "Generic Templates Used" },
+  { value: "100%", label: "Bespoke Creative Execution" },
+];
+
 export default function About() {
-  const values = [
-    { name: "Creativity", desc: "Every brand has a unique story worth telling." },
-    { name: "Strategy", desc: "Every decision should have purpose and direction." },
-    { name: "Authenticity", desc: "Real brands build real connections." },
-    { name: "Growth", desc: "Focused on sustainable long-term success." },
-    { name: "Partnership", desc: "We grow alongside our clients." },
-  ];
-
-  const acts = [
-    { act: "Act 1", title: "Discovery", desc: "Understanding the business, audience, goals, and market." },
-    { act: "Act 2", title: "Character Development", desc: "Building brand positioning, identity, and messaging." },
-    { act: "Act 3", title: "Storytelling", desc: "Creating engaging content and campaigns." },
-    { act: "Act 4", title: "Spotlight", desc: "Growing visibility, engagement, and audience reach." },
-    { act: "Act 5", title: "Legacy", desc: "Establishing authority and long-term brand recognition." },
-  ];
-
-  const differentiators = [
-    { title: "Strategy-First Approach", desc: "Every decision is intentional, backed by research and a clear growth roadmap." },
-    { title: "Creative Storytelling", desc: "We craft narratives that captivate audiences and make your brand unforgettable." },
-    { title: "Personalized Service", desc: "You are not a ticket in a queue. You get dedicated attention and custom solutions." },
-    { title: "Measurable Growth", desc: "We focus on real metrics that move the needle — traffic, engagement, and conversions." },
-    { title: "Long-Term Partnerships", desc: "We invest in your success because your growth is our growth." },
-  ];
-
   return (
-    <>
-      <section
-        className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-center bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "url('/assets/about-hero-demo.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent" />
+    <div className="bg-[#0a0a0a] text-white selection:bg-[#EC4B46] selection:text-white">
+      {/* Editorial Hero Header */}
+      <section className="relative min-h-[75vh] lg:min-h-[85vh] flex flex-col justify-end pt-36 pb-20 lg:pb-28 border-b border-white/10">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 pointer-events-none mix-blend-luminosity"
+          style={{ backgroundImage: "url('/assets/about-hero-demo.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-8 lg:px-16 pt-32 pb-20">
-          <h1 className="text-[110px] sm:text-[160px] lg:text-[220px] font-bold text-white leading-none tracking-tight mb-4 lg:-ml-2">
-            About
-          </h1>
+        <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+          <div className="max-w-4xl">
+            <span className="inline-flex items-center gap-3 text-[#EC4B46] text-xs font-semibold uppercase tracking-[0.3em] mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#EC4B46] animate-pulse" />
+              About The Agency
+            </span>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-5" />
-            <div className="lg:col-span-7 flex flex-col items-start lg:pl-6">
-              <p className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-white leading-[1.3] mb-6 max-w-2xl">
-                We created Main Character Media because we saw great brands going unnoticed.
-              </p>
-              <p className="text-base sm:text-lg text-[#a3a3a3] leading-relaxed max-w-2xl">
-                The market was crowded. Most agencies treated clients like numbers. We believed every brand deserves to be the main character in its own story.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <h1 className="text-5xl sm:text-7xl lg:text-[100px] font-light leading-[1.02] tracking-tight text-white mb-8">
+              Crafting Identities. <br />
+              <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-[#F59D6A]">
+                Elevating Leaders.
+              </span>
+            </h1>
 
-      <section className="py-24 lg:py-32 bg-[#1a1a1a] relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start">
-            <div className="max-w-lg">
-              <h6 className="text-[#EC4B46] text-[11px] uppercase tracking-[0.25em] font-semibold mb-6">
-                OUR MISSION
-              </h6>
-              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white leading-[1.2]">
-                To help brands build meaningful digital presence and become impossible to ignore.
-              </h2>
-            </div>
+            <p className="text-gray-300 text-lg sm:text-2xl font-light leading-relaxed max-w-3xl mb-12">
+              <strong className="text-white font-medium">The Prime Media</strong> is a luxury creative growth agency bridging aesthetic mastery with commercial performance.
+            </p>
 
-            <div className="lg:pt-[140px] lg:pl-16 max-w-lg">
-              <h6 className="text-[#F59D6A] text-[11px] uppercase tracking-[0.25em] font-semibold mb-6">
-                OUR VISION
-              </h6>
-              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white leading-[1.2]">
-                To become the creative growth partner behind the next generation of standout brands.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="relative py-28 lg:py-36 bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "url('/assets/about-wave-bg.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-
-        <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h6 className="text-[#EC4B46] text-xs uppercase tracking-[0.2em] font-semibold mb-6">
-              WHAT WE STAND FOR
-            </h6>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white leading-[1.3]">
-              Our Core Values
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {values.map((v, i) => (
-              <div
-                key={v.name}
-                className={`bg-[#222222]/80 backdrop-blur-sm p-8 rounded-lg border-l-4 ${i % 2 === 0 ? "border-[#EC4B46]" : "border-[#F59D6A]"} hover:bg-[#222222] transition-colors`}
+            <div className="flex flex-wrap gap-6 items-center pt-4">
+              <Link
+                href="/contact"
+                className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-white bg-[#EC4B46] hover:bg-[#d63d38] px-8 py-4 transition-all shadow-xl shadow-[#EC4B46]/10"
               >
-                <h3 className="text-white text-lg font-bold mb-3">{v.name}</h3>
-                <p className="text-[#a3a3a3] text-sm leading-relaxed">
-                  {v.desc}
-                </p>
-              </div>
-            ))}
+                Book a Discovery Call
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-gray-300 hover:text-white border-b border-white/30 hover:border-white py-2 transition-all"
+              >
+                Explore Portfolio &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 bg-[#181818]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h6 className="text-[#EC4B46] text-xs uppercase tracking-[0.2em] font-semibold mb-6">
-              OUR PROCESS
-            </h6>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white leading-[1.3] mb-4">
-              The Main Character Framework™
-            </h2>
-            <p className="text-[#a3a3a3] text-lg max-w-2xl mx-auto">
-              Our proprietary process for making brands unforgettable.
+      {/* Editorial Brand Manifesto */}
+      <section className="py-24 lg:py-36 bg-[#0e0e0e] border-b border-white/10 relative">
+        <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
+          <span className="text-[#F59D6A] text-xs uppercase tracking-[0.3em] font-semibold block mb-8">
+            OUR MANIFESTO
+          </span>
+
+          <blockquote className="font-serif italic text-2xl sm:text-4xl lg:text-5xl text-white/95 leading-[1.35] font-light mb-10 max-w-4xl mx-auto">
+            &ldquo;In an era of fleeting attention, extraordinary brands are not built by chance. They are sculpted with intention, vision, and relentless creative discipline.&rdquo;
+          </blockquote>
+
+          <div className="flex flex-col items-center justify-center gap-3 pt-6 border-t border-white/10 max-w-xs mx-auto">
+            <img src="/Logo.svg" alt="The Prime Media" className="h-10 w-auto object-contain mb-1" />
+            <p className="text-white font-bold tracking-wide text-base">The Prime Media</p>
+            <p className="text-[#EC4B46] text-xs uppercase tracking-[0.25em] font-medium">
+              Your Brand, at it&apos;s Prime.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Story & Origin Narrative */}
+      <section className="py-28 lg:py-40 bg-[#0a0a0a] relative border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+            {/* Sticky Left Column */}
+            <div className="lg:col-span-5">
+              <div className="lg:sticky lg:top-36 space-y-6">
+                <span className="text-[#EC4B46] text-xs uppercase tracking-[0.3em] font-semibold block">
+                  ORIGIN &amp; VISION
+                </span>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight">
+                  Born to Break <br />
+                  <span className="font-serif italic text-gray-300">Digital Noise.</span>
+                </h2>
+                <p className="text-gray-400 text-sm leading-relaxed max-w-md pt-2">
+                  A flagship creative initiative by <strong className="text-white font-medium">Aaradhya Digital Solutions</strong>, designed for forward-thinking brands.
+                </p>
+
+                <div className="pt-8 border-t border-white/10">
+                  <div className="grid grid-cols-2 gap-6">
+                    {editorialStats.slice(0, 2).map((s) => (
+                      <div key={s.label}>
+                        <p className="text-3xl lg:text-4xl font-extrabold text-white mb-1">{s.value}</p>
+                        <p className="text-[11px] uppercase tracking-wider text-gray-400 font-medium">{s.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column Narrative */}
+            <div className="lg:col-span-7 space-y-10 text-gray-300 text-base sm:text-lg font-light leading-relaxed">
+              <p className="text-xl sm:text-2xl text-white font-normal leading-relaxed border-l-2 border-[#EC4B46] pl-6 py-2">
+                We started with a singular proposition: businesses deserve far more than standard social posts and generic templates. They deserve a commanding digital presence that reflects their true caliber.
+              </p>
+
+              <p>
+                In today&rsquo;s crowded marketplace, attention is the ultimate currency. <strong className="text-white">The Prime Media</strong> combines strategic narrative design, high-production reel storytelling, and performance marketing to build brands that remain unforgettable.
+              </p>
+
+              <p>
+                We do not believe in superficial vanity metrics or cookie-cutter campaigns. Every visual identity, video script, and target ad funnel is engineered with deliberate purpose to drive customer acquisition and long-term brand equity.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Strategic Pillars */}
+      <section className="py-28 lg:py-40 bg-[#0e0e0e] border-b border-white/10 relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
+            <div>
+              <span className="text-[#F59D6A] text-xs uppercase tracking-[0.3em] font-semibold block mb-4">
+                CORE CAPABILITIES
+              </span>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight">
+                Our Core Pillars <br />
+                <span className="font-serif italic text-gray-300">of Practice.</span>
+              </h2>
+            </div>
+            <p className="text-gray-400 text-sm sm:text-base max-w-md font-light">
+              Four specialized disciplines designed to take your brand from initial positioning to dominant industry authority.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {acts.map((item, i) => (
+          {/* Editorial Accordion-style List */}
+          <div className="divide-y divide-white/10 border-t border-b border-white/10">
+            {pillars.map((p) => (
               <div
-                key={item.title}
-                className="flex flex-col items-center text-center p-8 bg-[#222222] rounded-lg border border-gray-800 hover:border-[#EC4B46]/30 transition-all"
+                key={p.number}
+                className="py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start hover:bg-white/[0.02] transition-colors px-4 rounded-lg group"
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#EC4B46] to-[#F59D6A] flex items-center justify-center mb-6 shadow-lg shadow-[#EC4B46]/20">
-                  <span className="text-white text-xl font-bold">{i + 1}</span>
+                <div className="lg:col-span-2 flex items-center gap-4">
+                  <span className="text-xs font-mono text-[#EC4B46] tracking-widest">{p.number}</span>
+                  <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{p.subtitle}</span>
                 </div>
-                <span className="text-[#EC4B46] text-xs uppercase tracking-[0.2em] font-semibold mb-2">
-                  {item.act}
-                </span>
-                <h3 className="text-white text-lg font-bold mb-3">{item.title}</h3>
-                <p className="text-[#a3a3a3] text-sm leading-relaxed">{item.desc}</p>
+
+                <div className="lg:col-span-4">
+                  <h3 className="text-2xl sm:text-3xl font-light text-white group-hover:text-[#EC4B46] transition-colors">
+                    {p.title}
+                  </h3>
+                </div>
+
+                <div className="lg:col-span-6">
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed font-light">
+                    {p.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h6 className="text-[#EC4B46] text-xs uppercase tracking-[0.2em] font-semibold mb-6">
-              WHY BRANDS CHOOSE US
-            </h6>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white leading-[1.3]">
-              Why Brands Choose Us
-            </h2>
-          </div>
+      {/* Editorial Luxury Closing CTA */}
+      <section className="py-32 lg:py-44 bg-[#0a0a0a] text-center relative overflow-hidden">
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-12">
+          <span className="text-[#EC4B46] text-xs uppercase tracking-[0.3em] font-semibold block mb-6">
+            ELEVATE YOUR BRAND
+          </span>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {differentiators.map((item) => (
-              <div
-                key={item.title}
-                className="p-8 bg-[#222222] rounded-lg border border-gray-800 hover:border-[#F59D6A]/30 transition-all"
-              >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#EC4B46]/20 to-[#F59D6A]/20 flex items-center justify-center mb-5">
-                  <svg className="w-6 h-6 text-[#EC4B46]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <h3 className="text-white text-lg font-bold mb-3">{item.title}</h3>
-                <p className="text-[#a3a3a3] text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white mb-8 leading-tight tracking-tight">
+            Your Brand, at it&apos;s <br />
+            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-[#F59D6A]">
+              Prime.
+            </span>
+          </h2>
+
+          <p className="text-gray-300 text-base sm:text-xl font-light leading-relaxed mb-12 max-w-xl mx-auto">
+            Let&rsquo;s discuss your visual identity, content strategy, and commercial targets.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-6 items-center">
+            <Link
+              href="/contact"
+              className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-white bg-[#EC4B46] hover:bg-[#d63d38] px-9 py-4.5 transition-all shadow-xl shadow-[#EC4B46]/10"
+            >
+              Schedule Discovery Call
+            </Link>
+            <Link
+              href="/careers"
+              className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-gray-300 hover:text-white border-b border-white/30 hover:border-white py-2 transition-all"
+            >
+              Join Our Team &rarr;
+            </Link>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

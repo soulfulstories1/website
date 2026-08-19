@@ -245,7 +245,7 @@ export default function Services() {
               Ready to get started?
             </h2>
             <p className="text-[#a3a3a3] text-lg leading-[1.8] mb-10 max-w-lg">
-              Let&apos;s talk about how we can help your brand become the main character.
+              Let&apos;s talk about how we can take your brand to its Prime.
             </p>
             <Link
               href="/contact"

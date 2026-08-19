@@ -97,7 +97,7 @@ export default function Portfolio() {
             {[
               { quote: "Our engagement rates tripled within the first two months. The team's content strategy completely transformed how our audience sees us.", name: "Sarah Mitchell", title: "Founder, Wellness Brand Co." },
               { quote: "They understood our vision immediately and brought it to life. The website they built for us is our single biggest lead generation tool.", name: "James Park", title: "CEO, Tech Startup X" },
-              { quote: "Working with Main Character Media felt like a true partnership. They cared about our brand as much as we did.", name: "Priya Sharma", title: "CMO, Fashion Label Y" },
+              { quote: "Working with The Prime Media felt like a true partnership. They cared about our brand as much as we did.", name: "Priya Sharma", title: "CMO, Fashion Label Y" },
             ].map((t) => (
               <div key={t.name} className="bg-[#222222] p-8 rounded-lg border border-white/5">
                 <div className="text-[#EC4B46] text-3xl leading-none mb-6">&ldquo;</div>

@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  distDir: "output",
+  turbopack: {
+    root: "C:\\Users\\naman\\Desktop\\exp\\prime_media",
+  },
 };
 
 export default nextConfig;

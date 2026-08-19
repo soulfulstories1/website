@@ -20,10 +20,42 @@ const portfolioItems = [
 ];
 
 const testimonials = [
-  { quote: "They transformed our social media presence entirely. Our engagement is up 300% and we're finally seeing real ROI from our content.", name: "Sarah Mitchell", title: "Founder, Wellness Brand Co." },
-  { quote: "Main Character Media didn't just build our website — they helped us find our voice. Our conversion rate doubled within three months.", name: "James Park", title: "CEO, Tech Startup X" },
-  { quote: "The team's strategic approach to our brand identity was exactly what we needed. We went from invisible to unforgettable in six months.", name: "Priya Sharma", title: "CMO, Fashion Label Y" },
+  {
+    quote: "The Prime Media completely changed the way we present our brand online. From content creation to social media management, their team understands what works and executes it beautifully.",
+    name: "Riya Sharma",
+    title: "Founder, Lifestyle Brand",
+  },
+  {
+    quote: "What impressed us most was how well they understood our brand. Every post, reel and campaign felt intentional, creative and aligned with our goals.",
+    name: "Aman Mehta",
+    title: "Business Owner",
+  },
+  {
+    quote: "We no longer have to worry about what to post or how to promote it. The Prime Media handles everything with creativity, consistency and professionalism.",
+    name: "Neha Agarwal",
+    title: "Founder, Fashion Brand",
+  },
+  {
+    quote: "Their content doesn’t just look good—it gets people talking. Our social media presence has become much more engaging since working with The Prime Media.",
+    name: "Rahul Jain",
+    title: "Entrepreneur",
+  },
+  {
+    quote: "From strategy and designing to reels and campaigns, the team has been incredibly easy to work with. They truly feel like an extension of our own team.",
+    name: "Priya Kapoor",
+    title: "Marketing Head",
+  },
+  {
+    quote: "If you’re looking for a team that combines creativity with strategy, The Prime Media is definitely worth working with. They helped us bring our brand to its prime.",
+    name: "Karan Malhotra",
+    title: "Founder, D2C Brand",
+  },
 ];
+
+const clientLogos = Array.from({ length: 11 }, (_, i) => ({
+  src: `/clients/client-${i + 1}.png`,
+  alt: `Client Logo ${i + 1}`,
+}));
 
 export default function Home() {
   return (
@@ -33,24 +65,34 @@ export default function Home() {
         className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black/60"
         style={{ backgroundImage: "url('/assets/bg-hero.jpg')" }}
       >
-        <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-8 py-32">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-7xl lg:text-[100px] font-semibold text-white leading-[1.1] lg:leading-[1.4] mb-6">
-              Making Your Brand the Main Character.
+        <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-8 py-32 sm:py-40">
+          <div className="max-w-4xl">
+            <span className="inline-flex items-center gap-2.5 text-[#EC4B46] text-xs font-semibold uppercase tracking-[0.25em] mb-6 px-4 py-2 rounded-full bg-[#EC4B46]/10 border border-[#EC4B46]/20 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-[#EC4B46] animate-pulse" />
+              Creative Growth Agency
+            </span>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[96px] font-bold text-white leading-[1.08] tracking-tight mb-8">
+              Your Brand,{" "}
+              <span className="whitespace-nowrap">
+                at it&apos;s{" "}
+                <span className="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-[#F59D6A]">
+                  Prime.
+                </span>
+              </span>
             </h1>
-            <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl">
-              We help brands build meaningful digital presence and become impossible to ignore.
+            <p className="text-gray-300 text-lg sm:text-xl lg:text-[22px] font-light leading-relaxed mb-12 max-w-2xl">
+              We help brands build a meaningful digital presence, craft viral content, and become impossible to ignore.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <Link
                 href="/contact"
-                className="inline-block text-sm font-medium uppercase tracking-[2px] text-white border-[1.6px] border-white px-[30px] py-[15px] hover:bg-white hover:text-surface-dark transition-all"
+                className="inline-block text-xs sm:text-sm font-semibold uppercase tracking-[2px] text-white bg-[#EC4B46] hover:bg-[#d63d38] px-8 py-4 sm:px-9 sm:py-4.5 transition-all shadow-lg shadow-[#EC4B46]/25 hover:shadow-xl hover:shadow-[#EC4B46]/40 hover:-translate-y-0.5"
               >
-                Book a Discovery Call
+                Book a Discovery Call &rarr;
               </Link>
               <Link
                 href="/portfolio"
-                className="inline-block text-sm font-medium uppercase tracking-[2px] text-white/70 border-[1.6px] border-white/30 px-[30px] py-[15px] hover:border-white hover:text-white transition-all"
+                className="inline-block text-xs sm:text-sm font-semibold uppercase tracking-[2px] text-white/80 border border-white/30 hover:border-white hover:text-white px-8 py-4 sm:px-9 sm:py-4.5 transition-all backdrop-blur-xs hover:bg-white/5 hover:-translate-y-0.5"
               >
                 View Our Work
               </Link>
@@ -93,7 +135,7 @@ export default function Home() {
                 ))}
               </ul>
               <p className="text-gray-300 text-[15px] leading-relaxed mt-10">
-                Main Character Media solves this. We make your brand impossible to ignore.
+                The Prime Media solves this. We make your brand impossible to ignore.
               </p>
             </div>
           </div>
@@ -113,10 +155,10 @@ export default function Home() {
           </div>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              We believe your brand is the main character of its own story. Our job is to help you write that story — through strategy, creativity, and relentless execution. We don't just market brands. We build narratives that captivate, identities that resonate, and presences that demand attention.
+              We believe in unlocking your brand&apos;s highest potential. Our job is to help you build that legacy — through strategy, creativity, and relentless execution. We don&apos;t just market brands. We build narratives that captivate, identities that resonate, and presences that demand attention.
             </p>
             <p className="text-white/50 text-lg italic">
-              &ldquo;Your brand is the main character. We help write the story.&rdquo;
+              &ldquo;Your Brand, at it&apos;s Prime.&rdquo;
             </p>
           </div>
         </div>
@@ -176,29 +218,36 @@ export default function Home() {
       </section>
 
       {/* Our Clients Section */}
-      <section className="py-20 lg:py-28 bg-[#222222]">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white text-center mb-16 tracking-wide">
-            Brands We've Helped Shine
+      <section className="py-24 lg:py-32 bg-[#181818] overflow-hidden relative border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-16 text-center">
+          <h6 className="text-[#EC4B46] text-[11px] uppercase tracking-[0.25em] font-semibold mb-4">
+            TRUSTED PARTNERS
+          </h6>
+          <h2 className="text-3xl lg:text-[42px] font-bold text-white tracking-tight">
+            Brands We&apos;ve Helped Shine
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+        </div>
+
+        {/* Logo Grid container with clean cards */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+            {clientLogos.map((logo) => (
               <div
-                key={i}
-                className="relative h-36 sm:h-44 flex items-center justify-center p-6 group"
+                key={logo.src}
+                className="group relative h-40 sm:h-48 bg-zinc-900/60 rounded-2xl border border-white/5 hover:border-white/20 flex items-center justify-center p-6 transition-all duration-300 hover:bg-zinc-900 hover:-translate-y-1"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gray-700/50" />
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 h-20 w-[1px] bg-gray-700/50" />
-                {i > 4 && (
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gray-700/50" />
-                )}
                 <img
-                  src={`/assets/client-logo-${i % 2 === 0 ? 2 : 1}.png`}
-                  alt={`Client Logo ${i}`}
-                  className="max-h-9 max-w-[140px] object-contain filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity"
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-28 w-auto max-w-[220px] object-contain opacity-70 grayscale filter group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}
+            {/* 12th card for visual balance */}
+            <div className="group relative h-40 sm:h-48 bg-zinc-900/30 rounded-2xl border border-dashed border-white/10 flex flex-col items-center justify-center p-6 text-center">
+              <span className="text-[#EC4B46] font-bold text-xl mb-2">+ Your Brand</span>
+              <span className="text-white/40 text-xs">Be Next</span>
+            </div>
           </div>
         </div>
       </section>
@@ -249,7 +298,7 @@ export default function Home() {
             LET&apos;S BEGIN
           </h6>
           <h2 className="text-4xl lg:text-[56px] font-bold text-white leading-[1.2] mb-6">
-            Ready to Become the<br />Main Character?
+            Ready to Take Your Brand<br />To its Prime?
           </h2>
           <p className="text-white/50 text-lg mb-10 max-w-lg mx-auto">
             Let&apos;s write your brand&apos;s next chapter together.
