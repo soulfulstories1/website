@@ -9,7 +9,6 @@ const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
-  { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -32,8 +31,8 @@ export default function Header() {
                 href={link.href}
                 className={`text-[15px] font-medium tracking-wide transition-colors ${
                   pathname === link.href
-                    ? "text-white"
-                    : "text-gray-300 hover:text-white"
+                    ? "text-[#16B0C7] font-semibold"
+                    : "text-gray-300 hover:text-[#16B0C7]"
                 }`}
               >
                 {link.label}
@@ -56,7 +55,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-sm border-t border-white/5">
+        <div className="lg:hidden bg-[#090b10]/95 backdrop-blur-md border-t border-white/5">
           <nav className="flex flex-col px-6 py-6 gap-2">
             {navLinks.map((link) => (
               <Link
@@ -64,7 +63,7 @@ export default function Header() {
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={`py-2 text-base font-medium transition-colors ${
-                  pathname === link.href ? "text-white" : "text-white/75 hover:text-white"
+                  pathname === link.href ? "text-[#16B0C7] font-semibold" : "text-white/75 hover:text-[#16B0C7]"
                 }`}
               >
                 {link.label}

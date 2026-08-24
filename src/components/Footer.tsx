@@ -27,21 +27,21 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white border-t border-white/10 relative overflow-hidden selection:bg-[#EC4B46] selection:text-white">
+    <footer className="bg-[#080a0f] text-white border-t border-white/10 relative overflow-hidden selection:bg-[#16B0C7] selection:text-black">
       {/* Top Footer Callout Banner */}
-      <div className="border-b border-white/10 py-12 lg:py-16 bg-[#0e0e0e] relative">
+      <div className="border-b border-white/10 py-12 lg:py-16 bg-[#0b0e14] relative">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <span className="text-[#EC4B46] text-xs font-semibold uppercase tracking-[0.25em] block mb-2">
+            <span className="text-[#16B0C7] text-xs font-semibold uppercase tracking-[0.25em] block mb-2">
               Ready to Scale?
             </span>
             <h3 className="text-2xl sm:text-4xl font-light text-white tracking-tight">
-              Let&apos;s bring your brand to its <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-[#F59D6A]">Prime.</span>
+              Let&apos;s bring your brand to its <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#b4eff7] to-[#16B0C7]">Prime.</span>
             </h3>
           </div>
           <Link
             href="/contact"
-            className="inline-block text-xs font-semibold uppercase tracking-[2px] text-white bg-[#EC4B46] hover:bg-[#d63d38] px-8 py-4 transition-all shadow-lg shadow-[#EC4B46]/20 shrink-0"
+            className="inline-block text-xs font-semibold uppercase tracking-[2px] text-white bg-[#16B0C7] hover:bg-[#139bb0] px-8 py-4 transition-all shadow-lg shadow-[#16B0C7]/20 shrink-0"
           >
             Book a Discovery Call &rarr;
           </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
               <img
                 src="/Logo.svg"
                 alt="The Prime Media"
-                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(255,255,255,0.12)] hover:opacity-90 transition-opacity"
+                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(22,176,199,0.15)] hover:opacity-90 transition-opacity"
               />
             </Link>
 
@@ -70,7 +70,7 @@ export default function Footer() {
             </p>
 
             <div className="pt-2">
-              <span className="text-xs uppercase tracking-widest text-[#F59D6A] font-semibold bg-[#F59D6A]/10 border border-[#F59D6A]/20 px-3 py-1.5 rounded-full inline-block">
+              <span className="text-xs uppercase tracking-widest text-[#16B0C7] font-semibold bg-[#16B0C7]/10 border border-[#16B0C7]/20 px-3 py-1.5 rounded-full inline-block">
                 Aaradhya Digital Solutions Initiative
               </span>
             </div>
@@ -78,7 +78,7 @@ export default function Footer() {
 
           {/* Column 2: Navigation (2 cols) */}
           <div className="lg:col-span-2">
-            <h6 className="text-xs font-semibold tracking-[0.2em] text-[#EC4B46] uppercase mb-6">
+            <h6 className="text-xs font-semibold tracking-[0.2em] text-[#16B0C7] uppercase mb-6">
               Navigation
             </h6>
             <ul className="space-y-3">
@@ -88,7 +88,7 @@ export default function Footer() {
                     href={link.href}
                     className="text-sm text-gray-300 hover:text-white transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#EC4B46] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#16B0C7] opacity-0 group-hover:opacity-100 transition-opacity" />
                     <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
                   </Link>
                 </li>
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* Column 3: Services (3 cols) */}
           <div className="lg:col-span-3">
-            <h6 className="text-xs font-semibold tracking-[0.2em] text-[#EC4B46] uppercase mb-6">
+            <h6 className="text-xs font-semibold tracking-[0.2em] text-[#16B0C7] uppercase mb-6">
               Services
             </h6>
             <ul className="space-y-3">
@@ -117,7 +117,7 @@ export default function Footer() {
 
           {/* Column 4: Contact & Connect (3 cols) */}
           <div className="lg:col-span-3 space-y-6">
-            <h6 className="text-xs font-semibold tracking-[0.2em] text-[#EC4B46] uppercase mb-6">
+            <h6 className="text-xs font-semibold tracking-[0.2em] text-[#16B0C7] uppercase mb-6">
               Connect
             </h6>
 
@@ -126,7 +126,7 @@ export default function Footer() {
                 <span className="text-[11px] uppercase tracking-wider text-gray-400 font-medium block mb-1">Direct Email</span>
                 <a
                   href="mailto:hello@aaradhyadigitalsolutions.com"
-                  className="text-sm text-white font-medium hover:text-[#EC4B46] transition-colors block"
+                  className="text-sm text-white font-medium hover:text-[#16B0C7] transition-colors block"
                 >
                   hello@aaradhyadigitalsolutions.com
                 </a>
@@ -136,7 +136,7 @@ export default function Footer() {
                 <span className="text-[11px] uppercase tracking-wider text-gray-400 font-medium block mb-1">Phone Contact</span>
                 <a
                   href="tel:+919926806080"
-                  className="text-sm text-white font-medium hover:text-[#EC4B46] transition-colors block"
+                  className="text-sm text-white font-medium hover:text-[#16B0C7] transition-colors block"
                 >
                   +91 99268 06080
                 </a>
@@ -152,7 +152,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-gray-300 hover:text-white bg-white/5 border border-white/10 hover:border-white/30 px-3 py-1.5 rounded transition-all"
+                    className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-gray-300 hover:text-white bg-white/5 border border-white/10 hover:border-[#16B0C7]/40 px-3 py-1.5 rounded transition-all"
                   >
                     <s.icon className="w-4 h-4" />
                     {s.label}
@@ -165,7 +165,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright Bar */}
-      <div className="border-t border-white/10 py-6 px-6 lg:px-12 bg-[#050505]">
+      <div className="border-t border-white/10 py-6 px-6 lg:px-12 bg-[#040609]">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <p>&copy; {new Date().getFullYear()} The Prime Media. All rights reserved.</p>
           <p className="text-gray-400">

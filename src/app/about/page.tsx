@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Reveal, { StaggerContainer, StaggerItem } from "@/components/Reveal";
 
 const pillars = [
   {
@@ -36,25 +37,28 @@ const editorialStats = [
 
 export default function About() {
   return (
-    <div className="bg-[#0a0a0a] text-white selection:bg-[#EC4B46] selection:text-white">
+    <div className="bg-[#0a0c12] text-white selection:bg-[#16B0C7] selection:text-black">
       {/* Editorial Hero Header */}
-      <section className="relative min-h-[75vh] lg:min-h-[85vh] flex flex-col justify-end pt-36 pb-20 lg:pb-28 border-b border-white/10">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 pointer-events-none mix-blend-luminosity"
-          style={{ backgroundImage: "url('/assets/about-hero-demo.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
+      <section className="relative min-h-[75vh] lg:min-h-[85vh] flex flex-col justify-end pt-36 pb-20 lg:pb-28 border-b border-white/10 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/about-hero-demo.jpg"
+            alt="The Prime Media"
+            className="w-full h-full object-cover object-center opacity-25 mix-blend-luminosity select-none pointer-events-none"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0c12] via-[#0a0c12]/80 to-transparent" />
+        </div>
 
-        <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
-          <div className="max-w-4xl">
-            <span className="inline-flex items-center gap-3 text-[#EC4B46] text-xs font-semibold uppercase tracking-[0.3em] mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#EC4B46] animate-pulse" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+          <Reveal preset="fade-up" duration={0.8} className="max-w-4xl">
+            <span className="inline-flex items-center gap-3 text-[#16B0C7] text-xs font-semibold uppercase tracking-[0.3em] mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#16B0C7] animate-pulse" />
               About The Agency
             </span>
 
             <h1 className="text-5xl sm:text-7xl lg:text-[100px] font-light leading-[1.02] tracking-tight text-white mb-8">
               Crafting Identities. <br />
-              <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-[#F59D6A]">
+              <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-[#b4eff7] to-[#16B0C7]">
                 Elevating Leaders.
               </span>
             </h1>
@@ -66,25 +70,25 @@ export default function About() {
             <div className="flex flex-wrap gap-6 items-center pt-4">
               <Link
                 href="/contact"
-                className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-white bg-[#EC4B46] hover:bg-[#d63d38] px-8 py-4 transition-all shadow-xl shadow-[#EC4B46]/10"
+                className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-white bg-[#16B0C7] hover:bg-[#139bb0] px-8 py-4 transition-all shadow-xl shadow-[#16B0C7]/20"
               >
                 Book a Discovery Call
               </Link>
               <Link
                 href="/portfolio"
-                className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-gray-300 hover:text-white border-b border-white/30 hover:border-white py-2 transition-all"
+                className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-gray-300 hover:text-white border-b border-white/30 hover:border-[#16B0C7] py-2 transition-all"
               >
                 Explore Portfolio &rarr;
               </Link>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Editorial Brand Manifesto */}
-      <section className="py-24 lg:py-36 bg-[#0e0e0e] border-b border-white/10 relative">
-        <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
-          <span className="text-[#F59D6A] text-xs uppercase tracking-[0.3em] font-semibold block mb-8">
+      <section className="py-24 lg:py-36 bg-[#0e111a] border-b border-white/10 relative">
+        <Reveal preset="fade-up" className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
+          <span className="text-[#16B0C7] text-xs uppercase tracking-[0.3em] font-semibold block mb-8">
             OUR MANIFESTO
           </span>
 
@@ -95,21 +99,21 @@ export default function About() {
           <div className="flex flex-col items-center justify-center gap-3 pt-6 border-t border-white/10 max-w-xs mx-auto">
             <img src="/Logo.svg" alt="The Prime Media" className="h-10 w-auto object-contain mb-1" />
             <p className="text-white font-bold tracking-wide text-base">The Prime Media</p>
-            <p className="text-[#EC4B46] text-xs uppercase tracking-[0.25em] font-medium">
+            <p className="text-[#16B0C7] text-xs uppercase tracking-[0.25em] font-medium">
               Your Brand, at it&apos;s Prime.
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* The Story & Origin Narrative */}
-      <section className="py-28 lg:py-40 bg-[#0a0a0a] relative border-b border-white/10">
+      <section className="py-28 lg:py-40 bg-[#0a0c12] relative border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
             {/* Sticky Left Column */}
             <div className="lg:col-span-5">
-              <div className="lg:sticky lg:top-36 space-y-6">
-                <span className="text-[#EC4B46] text-xs uppercase tracking-[0.3em] font-semibold block">
+              <Reveal preset="slide-right" className="lg:sticky lg:top-36 space-y-6">
+                <span className="text-[#16B0C7] text-xs uppercase tracking-[0.3em] font-semibold block">
                   ORIGIN &amp; VISION
                 </span>
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight">
@@ -130,12 +134,12 @@ export default function About() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </Reveal>
             </div>
 
             {/* Right Column Narrative */}
-            <div className="lg:col-span-7 space-y-10 text-gray-300 text-base sm:text-lg font-light leading-relaxed">
-              <p className="text-xl sm:text-2xl text-white font-normal leading-relaxed border-l-2 border-[#EC4B46] pl-6 py-2">
+            <Reveal preset="slide-left" delay={0.15} className="lg:col-span-7 space-y-10 text-gray-300 text-base sm:text-lg font-light leading-relaxed">
+              <p className="text-xl sm:text-2xl text-white font-normal leading-relaxed border-l-2 border-[#16B0C7] pl-6 py-2">
                 We started with a singular proposition: businesses deserve far more than standard social posts and generic templates. They deserve a commanding digital presence that reflects their true caliber.
               </p>
 
@@ -146,18 +150,17 @@ export default function About() {
               <p>
                 We do not believe in superficial vanity metrics or cookie-cutter campaigns. Every visual identity, video script, and target ad funnel is engineered with deliberate purpose to drive customer acquisition and long-term brand equity.
               </p>
-
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* Editorial Strategic Pillars */}
-      <section className="py-28 lg:py-40 bg-[#0e0e0e] border-b border-white/10 relative">
+      <section className="py-28 lg:py-40 bg-[#0e111a] border-b border-white/10 relative">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
+          <Reveal preset="fade-up" className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
             <div>
-              <span className="text-[#F59D6A] text-xs uppercase tracking-[0.3em] font-semibold block mb-4">
+              <span className="text-[#16B0C7] text-xs uppercase tracking-[0.3em] font-semibold block mb-4">
                 CORE CAPABILITIES
               </span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight">
@@ -168,22 +171,22 @@ export default function About() {
             <p className="text-gray-400 text-sm sm:text-base max-w-md font-light">
               Four specialized disciplines designed to take your brand from initial positioning to dominant industry authority.
             </p>
-          </div>
+          </Reveal>
 
           {/* Editorial Accordion-style List */}
-          <div className="divide-y divide-white/10 border-t border-b border-white/10">
+          <StaggerContainer staggerDelay={0.1} className="divide-y divide-white/10 border-t border-b border-white/10">
             {pillars.map((p) => (
-              <div
+              <StaggerItem
                 key={p.number}
-                className="py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start hover:bg-white/[0.02] transition-colors px-4 rounded-lg group"
+                className="py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start hover:bg-[#134981]/15 transition-colors px-4 rounded-lg group"
               >
                 <div className="lg:col-span-2 flex items-center gap-4">
-                  <span className="text-xs font-mono text-[#EC4B46] tracking-widest">{p.number}</span>
+                  <span className="text-xs font-mono text-[#16B0C7] tracking-widest">{p.number}</span>
                   <span className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{p.subtitle}</span>
                 </div>
 
                 <div className="lg:col-span-4">
-                  <h3 className="text-2xl sm:text-3xl font-light text-white group-hover:text-[#EC4B46] transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-light text-white group-hover:text-[#16B0C7] transition-colors">
                     {p.title}
                   </h3>
                 </div>
@@ -193,44 +196,9 @@ export default function About() {
                     {p.desc}
                   </p>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Editorial Luxury Closing CTA */}
-      <section className="py-32 lg:py-44 bg-[#0a0a0a] text-center relative overflow-hidden">
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-12">
-          <span className="text-[#EC4B46] text-xs uppercase tracking-[0.3em] font-semibold block mb-6">
-            ELEVATE YOUR BRAND
-          </span>
-
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-light text-white mb-8 leading-tight tracking-tight">
-            Your Brand, at it&apos;s <br />
-            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-[#F59D6A]">
-              Prime.
-            </span>
-          </h2>
-
-          <p className="text-gray-300 text-base sm:text-xl font-light leading-relaxed mb-12 max-w-xl mx-auto">
-            Let&rsquo;s discuss your visual identity, content strategy, and commercial targets.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-6 items-center">
-            <Link
-              href="/contact"
-              className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-white bg-[#EC4B46] hover:bg-[#d63d38] px-9 py-4.5 transition-all shadow-xl shadow-[#EC4B46]/10"
-            >
-              Schedule Discovery Call
-            </Link>
-            <Link
-              href="/careers"
-              className="inline-block text-xs font-semibold uppercase tracking-[2.5px] text-gray-300 hover:text-white border-b border-white/30 hover:border-white py-2 transition-all"
-            >
-              Join Our Team &rarr;
-            </Link>
-          </div>
+          </StaggerContainer>
         </div>
       </section>
     </div>
