@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Reveal, { StaggerContainer, StaggerItem } from "@/components/Reveal";
+import { getAssetPath } from "@/utils/paths";
 
 const contactMethods = [
   {
@@ -84,7 +85,7 @@ export default function Contact() {
         {/* Full-coverage background image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/bg-07-free-img.jpg"
+            src={getAssetPath("/assets/bg-07-free-img.jpg")}
             alt="Contact The Prime Media"
             className="w-full h-full object-cover object-center select-none pointer-events-none"
           />
@@ -117,7 +118,7 @@ export default function Contact() {
         <div
           className="absolute inset-0 opacity-15 pointer-events-none mix-blend-screen"
           style={{
-            backgroundImage: "url('/assets/services-bg-overlay-01.png')",
+            backgroundImage: `url('${getAssetPath("/assets/services-bg-overlay-01.png")}')`,
             backgroundPosition: "left center",
             backgroundSize: "auto 100%",
             backgroundRepeat: "no-repeat",

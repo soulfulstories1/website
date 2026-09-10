@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { getAssetPath } from "@/utils/paths";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -54,7 +55,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="inline-block">
               <img
-                src="/Logo.svg"
+                src={getAssetPath("/Logo.svg")}
                 alt="The Prime Media"
                 className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(22,176,199,0.15)] hover:opacity-90 transition-opacity"
               />

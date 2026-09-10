@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal, { StaggerContainer, StaggerItem } from "@/components/Reveal";
+import { getAssetPath } from "@/utils/paths";
 
 const CheckIcon = () => (
   <svg className="w-4 h-4 text-[#16B0C7] mt-1 mr-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -126,7 +127,7 @@ export default function Services() {
         {/* Full-coverage background image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/services-hero-demo.jpg"
+            src={getAssetPath("/assets/services-hero-demo.jpg")}
             alt="Services at The Prime Media"
             className="w-full h-full object-cover object-center select-none pointer-events-none"
           />
@@ -156,7 +157,7 @@ export default function Services() {
       <section
         className="min-h-screen flex items-center py-24 lg:py-32 bg-[#0e111a] relative bg-no-repeat"
         style={{
-          backgroundImage: "url('/assets/services-bg-overlay-01.png')",
+          backgroundImage: `url('${getAssetPath("/assets/services-bg-overlay-01.png")}')`,
           backgroundPosition: "left center",
           backgroundSize: "auto 100%"
         }}

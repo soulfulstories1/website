@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { getAssetPath } from "@/utils/paths";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -21,7 +22,7 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <Link href="/" className="flex items-center gap-3 group">
-            <img src="/Logo.svg" alt="The Prime Media" className="h-12 w-auto" />
+            <img src={getAssetPath("/Logo.svg")} alt="The Prime Media" className="h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10">

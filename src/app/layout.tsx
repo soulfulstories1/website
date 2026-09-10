@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { basePath } from "@/utils/paths";
 
 export const metadata: Metadata = {
   title: "The Prime Media | Strategy-led Digital Marketing & Social Media Agency",
@@ -27,9 +28,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/Logo.svg",
-    shortcut: "/Logo.svg",
-    apple: "/Logo.svg",
+    icon: `${basePath}/Logo.svg`,
+    shortcut: `${basePath}/Logo.svg`,
+    apple: `${basePath}/Logo.svg`,
   },
   openGraph: {
     type: "website",

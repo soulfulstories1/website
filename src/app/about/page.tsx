@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal, { StaggerContainer, StaggerItem } from "@/components/Reveal";
+import { getAssetPath } from "@/utils/paths";
 
 const pillars = [
   {
@@ -42,7 +43,7 @@ export default function About() {
       <section className="relative min-h-[75vh] lg:min-h-[85vh] flex flex-col justify-end pt-36 pb-20 lg:pb-28 border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/about-hero-demo.jpg"
+            src={getAssetPath("/assets/about-hero-demo.jpg")}
             alt="The Prime Media"
             className="w-full h-full object-cover object-center opacity-25 mix-blend-luminosity select-none pointer-events-none"
           />
@@ -97,7 +98,7 @@ export default function About() {
           </blockquote>
 
           <div className="flex flex-col items-center justify-center gap-3 pt-6 border-t border-white/10 max-w-xs mx-auto">
-            <img src="/Logo.svg" alt="The Prime Media" className="h-10 w-auto object-contain mb-1" />
+            <img src={getAssetPath("/Logo.svg")} alt="The Prime Media" className="h-10 w-auto object-contain mb-1" />
             <p className="text-white font-bold tracking-wide text-base">The Prime Media</p>
             <p className="text-[#16B0C7] text-xs uppercase tracking-[0.25em] font-medium">
               Your Brand, at it&apos;s Prime.

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal, { StaggerContainer, StaggerItem } from "@/components/Reveal";
+import { getAssetPath } from "@/utils/paths";
 
 const services = [
   { number: "01", title: "Social Media Management", desc: "Content strategy, scheduling, graphic design, reel planning, community management, and monthly reporting to keep your brand visible every day.", color: "bg-[#134981]" },
@@ -11,13 +12,13 @@ const services = [
 ];
 
 const portfolioItems = [
-  { title: "Wellness Brand Co.", category: "Social Media Management", image: "/assets/portfolio-1.jpg" },
-  { title: "Tech Startup X", category: "Branding & Web Design", image: "/assets/portfolio-2.jpg" },
-  { title: "Fashion Label Y", category: "Content Creation", image: "/assets/portfolio-3.jpg" },
-  { title: "Restaurant Group Z", category: "Performance Marketing", image: "/assets/portfolio-4.jpg" },
-  { title: "Real Estate Firm", category: "Branding", image: "/assets/portfolio-5.jpg" },
-  { title: "E-Commerce Brand", category: "Social Media & Ads", image: "/assets/portfolio-6.jpg" },
-  { title: "Consulting Agency", category: "LinkedIn Branding", image: "/assets/portfolio-7.jpg" },
+  { title: "Wellness Brand Co.", category: "Social Media Management", image: getAssetPath("/assets/portfolio-1.jpg") },
+  { title: "Tech Startup X", category: "Branding & Web Design", image: getAssetPath("/assets/portfolio-2.jpg") },
+  { title: "Fashion Label Y", category: "Content Creation", image: getAssetPath("/assets/portfolio-3.jpg") },
+  { title: "Restaurant Group Z", category: "Performance Marketing", image: getAssetPath("/assets/portfolio-4.jpg") },
+  { title: "Real Estate Firm", category: "Branding", image: getAssetPath("/assets/portfolio-5.jpg") },
+  { title: "E-Commerce Brand", category: "Social Media & Ads", image: getAssetPath("/assets/portfolio-6.jpg") },
+  { title: "Consulting Agency", category: "LinkedIn Branding", image: getAssetPath("/assets/portfolio-7.jpg") },
 ];
 
 const testimonials = [
@@ -54,7 +55,7 @@ const testimonials = [
 ];
 
 const clientLogos = Array.from({ length: 11 }, (_, i) => ({
-  src: `/clients/client-${i + 1}.png`,
+  src: getAssetPath(`/clients/client-${i + 1}.png`),
   alt: `Client Logo ${i + 1}`,
 }));
 
@@ -66,7 +67,7 @@ export default function Home() {
         {/* Full-width, centered background image */}
         <div className="absolute inset-0 z-0 w-full h-full">
           <img
-            src="/assets/bg-hero.jpg"
+            src={getAssetPath("/assets/bg-hero.jpg")}
             alt="The Prime Media"
             className="w-full h-full object-cover object-center select-none pointer-events-none"
           />

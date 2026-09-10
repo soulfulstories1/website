@@ -1,18 +1,19 @@
 import Link from "next/link";
 import Reveal, { StaggerContainer, StaggerItem } from "@/components/Reveal";
+import { getAssetPath } from "@/utils/paths";
 
 const categories = [
   "All", "Social Media Management", "Content Creation", "Branding", "Website Design", "LinkedIn Personal Branding", "Performance Marketing"
 ];
 
 const portfolioItems = [
-  { title: "Wellness Brand Co.", category: "Social Media Management", image: "/assets/portfolio-00002-free-img.jpg" },
-  { title: "Tech Startup X", category: "Branding", image: "/assets/portfolio-00006-free-img.jpg" },
-  { title: "Fashion Label Y", category: "Content Creation", image: "/assets/portfolio-0001-free-img.jpg" },
-  { title: "Restaurant Group Z", category: "Performance Marketing", image: "/assets/portfolio-0008-free-img.jpg" },
-  { title: "Real Estate Firm", category: "Website Design", image: "/assets/portfolio-0004-free-img.jpg" },
-  { title: "E-Commerce Brand", category: "Social Media Management", image: "/assets/portfolio-0005-free-img.jpg" },
-  { title: "Consulting Agency", category: "LinkedIn Personal Branding", image: "/assets/portfolio-0007-free-img.jpg" },
+  { title: "Wellness Brand Co.", category: "Social Media Management", image: getAssetPath("/assets/portfolio-00002-free-img.jpg") },
+  { title: "Tech Startup X", category: "Branding", image: getAssetPath("/assets/portfolio-00006-free-img.jpg") },
+  { title: "Fashion Label Y", category: "Content Creation", image: getAssetPath("/assets/portfolio-0001-free-img.jpg") },
+  { title: "Restaurant Group Z", category: "Performance Marketing", image: getAssetPath("/assets/portfolio-0008-free-img.jpg") },
+  { title: "Real Estate Firm", category: "Website Design", image: getAssetPath("/assets/portfolio-0004-free-img.jpg") },
+  { title: "E-Commerce Brand", category: "Social Media Management", image: getAssetPath("/assets/portfolio-0005-free-img.jpg") },
+  { title: "Consulting Agency", category: "LinkedIn Personal Branding", image: getAssetPath("/assets/portfolio-0007-free-img.jpg") },
 ];
 
 const testimonials = [
@@ -56,7 +57,7 @@ export default function Portfolio() {
         {/* Full-coverage background image */}
         <div className="absolute inset-0 z-0 w-full h-full">
           <img
-            src="/assets/bg-16-free-img.jpg"
+            src={getAssetPath("/assets/bg-16-free-img.jpg")}
             alt="Portfolio at The Prime Media"
             className="w-full h-full object-cover object-center select-none pointer-events-none"
           />
