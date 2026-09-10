@@ -1,17 +1,27 @@
 import type { NextConfig } from "next";
+import path from "path";
 
-const repo = "website";
+const isProd = process.env.NODE_ENV === "production";
+const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH !== undefined
+    ? process.env.NEXT_PUBLIC_BASE_PATH
+    : isProd
+    ? "/website"
+    : "";
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: process.env.GITHUB_PAGES ? `/${repo}` : "",
-  assetPrefix: process.env.GITHUB_PAGES ? `/${repo}/` : "",
+  basePath: basePath || undefined,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
   env: {
-    NEXT_PUBLIC_BASE_PATH: process.env.GITHUB_PAGES ? `/${repo}` : "",
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
   images: {
     unoptimized: true,
+  },
+  turbopack: {
+    root: path.resolve(__dirname),
   },
 };
 
