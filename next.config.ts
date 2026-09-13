@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 import path from "path";
 
-const isProd = process.env.NODE_ENV === "production";
-const basePath =
-  process.env.NEXT_PUBLIC_BASE_PATH !== undefined
-    ? process.env.NEXT_PUBLIC_BASE_PATH
-    : isProd
-    ? "/website"
-    : "";
+// Empty for custom domains (e.g. aaradhyadigitalsolutions.com).
+// Set NEXT_PUBLIC_BASE_PATH=/website only for github.io/website subpath deploys.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",
